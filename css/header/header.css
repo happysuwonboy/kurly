@@ -143,18 +143,34 @@ header div.center div.header-gnb div.categories ul.category-list {
   left: 0;
   display: none;
 }
+header div.center div.header-gnb div.categories ul.category-list i {
+  margin-right: 10px;
+}
 header div.center div.header-gnb div.categories ul.category-list li {
   font-size: 0.8em;
   padding: 15px 10px;
   background-color: #fff;
   transition: all 0.1s;
+  position: relative;
 }
 header div.center div.header-gnb div.categories ul.category-list li:hover {
   color: white;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgba(128, 0, 128, 0.9);
 }
 header div.center div.header-gnb div.categories ul.category-list li:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+header div.center div.header-gnb div.categories ul.category-list li.new::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 0.5em;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: red;
 }
 header div.center div.header-gnb ul.gnb-menu {
   display: flex;

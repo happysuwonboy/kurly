@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/header/header.css">
   <link rel="stylesheet" href="./css/home/home-visual.css">
+  <link rel="stylesheet" href="./css/home/home-prod-section.css">
 </head>
 
 <body>
@@ -54,11 +55,11 @@
             카테고리
           </span>
           <ul class="category-list">
-            <li>9월 뷰티컬리 페스타</li>
-            <li>2023 추석 선물세트</li>
-            <li>채소</li>
-            <li>과일•견과•쌀</li>
-            <li>수산•해산•건어물</li>
+            <li class="new"><i class="fa-solid fa-champagne-glasses"></i> 9월 뷰티컬리 페스타</li>
+            <li class="new"><i class="fa-solid fa-gift"></i> 2023 추석 선물세트</li>
+            <li><i class="fa-solid fa-carrot"></i> 채소</li>
+            <li><i class="fa-solid fa-apple-whole"></i> 과일•견과•쌀</li>
+            <li><i class="fa-solid fa-fish"></i> 수산•해산•건어물</li>
           </ul>
         </div>
 

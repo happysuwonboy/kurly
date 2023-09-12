@@ -144,17 +144,31 @@ header {
           top: 100%;
           left: 0;
           display: none;
+          i {
+            margin-right: 10px;
+          }
           li {
             font-size: 0.8em;
             padding: 15px 10px;
             background-color: #fff;
             transition: all 0.1s;
+            position: relative;
             &:hover {
               color: white;
-              background-color: rgba(purple, 0.5);
+              background-color: rgba(purple, 0.9);
             }
             &:not(:last-child) {
               border-bottom: 1px solid #eee;
+            }
+            &.new::after {
+              content: '';
+              position: absolute;
+              top: 5px; right: 5px;
+              font-size: .5em;
+              display: inline-block;
+              width: 7px; height: 7px;
+              border-radius: 50%;
+              background-color: red
             }
           }
         }
