@@ -1,0 +1,227 @@
+@use "../mixin.scss" as m;
+
+header {
+  width: 100%;
+  &.fix {
+    div.center {
+      .members {
+        display: none;
+      }
+      .header-middle {
+        display: none;
+      }
+      .header-gnb {
+        .gnb-menu {
+          width: 30%;
+        }
+        .deliv-guide {
+          display: none;
+        }
+        .header-search,
+        .header-buttons {
+          display: block;
+          position: relative;
+        }
+        .header-search {
+          width: 30%;
+        }
+        .header-buttons {
+          display: flex;
+          width: 10%;
+          li {
+            button {
+              font-size: 1.5em;
+              padding: 0 15px;
+              &:hover {
+                color: purple;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  div.center {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    ul.members {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+      li {
+        margin-left: 15px;
+        position: relative;
+        &:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          border-right: 1px solid #aaa;
+          opacity: 0.7;
+          height: 100%;
+          top: 0;
+          right: -7.5px;
+        }
+        a {
+          font-size: 0.75em;
+          @media (hover: hover) {
+            &:hover {
+              text-decoration: underline;
+              color: purple;
+            }
+          }
+          &.active {
+            color: purple;
+            font-weight: 600;
+          }
+        }
+      } // li
+    }
+
+    div.header-middle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul.header-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+        li {
+          a {
+            position: relative;
+            font-size: 1.05em;
+            font-weight: 600;
+            color: #999;
+            &:hover {
+              color: purple;
+            }
+            &.active {
+              color: purple;
+            }
+            &.beauty::after {
+              content: "N";
+              position: absolute;
+              top: 0;
+              left: 104%;
+              color: red;
+              font-size: 0.3em;
+              font-weight: 600;
+            }
+          }
+          .logo-img {
+            margin-right: 5px;
+          }
+        }
+      }
+      div.header-search {
+        position: relative;
+        width: 40%;
+        input {
+          border: 1px solid purple;
+          border-radius: 5px;
+          padding: 10px;
+          width: 100%;
+          &::placeholder {
+            font-size: 0.9em;
+            color: rgba(#333, 0.6);
+          }
+        }
+        .search-btn {
+          position: absolute;
+          font-size: 1.2em;
+          color: purple;
+          top: 20%;
+          right: 3%;
+        }
+      }
+      ul.header-buttons {
+        display: flex;
+        li {
+          button {
+            font-size: 1.5em;
+            padding: 15px;
+            &:hover {
+              color: purple;
+            }
+          }
+        }
+      }
+    }
+
+    div.header-gnb {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      padding-bottom: 15px;
+      div.categories {
+        position: relative;
+        cursor: pointer;
+        &:hover span {
+          color: purple;
+        }
+        &:hover ul.category-list {
+          display: flex;
+        }
+        span {
+          font-size: 1em;
+          font-weight: 600;
+        }
+        ul.category-list {
+          width: 230px; // 이거 width 하드코딩 안하고 글자대로 어케 조절하지??
+          position: absolute;
+          flex-direction: column;
+          padding-top: 20px;
+          top: 100%;
+          left: 0;
+          display: none;
+          li {
+            font-size: 0.8em;
+            padding: 15px 10px;
+            background-color: #fff;
+            transition: all 0.1s;
+            &:hover {
+              color: white;
+              background-color: rgba(purple, 0.5);
+            }
+            &:not(:last-child) {
+              border-bottom: 1px solid #eee;
+            }
+          }
+        }
+      }
+      ul.gnb-menu {
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+        li {
+          a {
+            font-weight: 600;
+            &:hover {
+              color: purple;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      div.deliv-guide {
+        font-size: 0.8em;
+        border: 2px solid #eee;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        span {
+          color: purple;
+          font-weight: 600;
+        }
+      }
+      .header-search {
+        display: none;
+      }
+      .header-buttons {
+        display: none;
+      }
+    }
+  } // div.center
+}
