@@ -1,36 +1,6 @@
 header {
+  background-color: white;
   width: 100%;
-}
-header.fix div.center .members {
-  display: none;
-}
-header.fix div.center .header-middle {
-  display: none;
-}
-header.fix div.center .header-gnb .gnb-menu {
-  width: 30%;
-}
-header.fix div.center .header-gnb .deliv-guide {
-  display: none;
-}
-header.fix div.center .header-gnb .header-search,
-header.fix div.center .header-gnb .header-buttons {
-  display: block;
-  position: relative;
-}
-header.fix div.center .header-gnb .header-search {
-  width: 30%;
-}
-header.fix div.center .header-gnb .header-buttons {
-  display: flex;
-  width: 10%;
-}
-header.fix div.center .header-gnb .header-buttons li button {
-  font-size: 1.5em;
-  padding: 0 15px;
-}
-header.fix div.center .header-gnb .header-buttons li button:hover {
-  color: purple;
 }
 header div.center {
   max-width: 1080px;
@@ -48,11 +18,12 @@ header div.center ul.members li {
 }
 header div.center ul.members li:not(:last-child)::after {
   content: "";
+  display: block;
   position: absolute;
-  border-right: 1px solid #aaa;
+  height: 13px;
+  border-right: 1px solid #bbb;
   opacity: 0.7;
-  height: 100%;
-  top: 0;
+  top: 5px;
   right: -7.5px;
 }
 header div.center ul.members li a {
@@ -205,9 +176,70 @@ header div.center div.header-gnb div.deliv-guide span {
   color: purple;
   font-weight: 600;
 }
-header div.center div.header-gnb .header-search {
+header div.center div.header-gnb div.header-search {
   display: none;
 }
 header div.center div.header-gnb .header-buttons {
   display: none;
+}
+
+header.fix {
+  position: fixed;
+}
+header.fix div.center .members {
+  display: none;
+}
+header.fix div.center .header-middle {
+  display: none;
+}
+header.fix div.center .header-gnb .categories {
+  margin-right: 50px;
+}
+header.fix div.center .header-gnb .gnb-menu {
+  width: 40%;
+}
+header.fix div.center .header-gnb .deliv-guide {
+  display: none;
+}
+header.fix div.center .header-gnb .header-search,
+header.fix div.center .header-gnb .header-buttons {
+  display: block;
+  position: relative;
+}
+header.fix div.center .header-gnb .header-search {
+  position: relative;
+  width: 25%;
+}
+header.fix div.center .header-gnb .header-search input {
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 7px;
+  width: 100%;
+}
+header.fix div.center .header-gnb .header-search input::-moz-placeholder {
+  font-size: 0.8em;
+  color: rgba(51, 51, 51, 0.6);
+}
+header.fix div.center .header-gnb .header-search input::placeholder {
+  font-size: 0.8em;
+  color: rgba(51, 51, 51, 0.6);
+}
+header.fix div.center .header-gnb .header-search .search-btn {
+  position: absolute;
+  font-size: 1em;
+  color: black;
+  top: 20%;
+  right: 5%;
+}
+header.fix div.center .header-gnb .header-buttons {
+  display: flex;
+  width: 10%;
+}
+header.fix div.center .header-gnb .header-buttons li button {
+  font-size: 1.5em;
+  padding: 0 15px;
+}
+header.fix div.center .header-gnb .header-buttons li button:hover {
+  color: purple;
 }/*# sourceMappingURL=header.css.map */

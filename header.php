@@ -12,10 +12,11 @@
 </head>
 
 <body>
+  <script type="module" src="./js/header.js"></script>
   <!-- <div class="top-banner">
     지금 가입하고, 1만원 쿠폰 받아가세요!
   </div> -->
-  <header class="fix">
+  <header class="">
     <div class="center">
 
       <ul class="members">

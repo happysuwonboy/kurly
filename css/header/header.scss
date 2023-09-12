@@ -1,46 +1,9 @@
 @use "../mixin.scss" as m;
 
 header {
+  background-color: white;
   width: 100%;
-  &.fix {
-    div.center {
-      .members {
-        display: none;
-      }
-      .header-middle {
-        display: none;
-      }
-      .header-gnb {
-        .gnb-menu {
-          width: 30%;
-        }
-        .deliv-guide {
-          display: none;
-        }
-        .header-search,
-        .header-buttons {
-          display: block;
-          position: relative;
-        }
-        .header-search {
-          width: 30%;
-        }
-        .header-buttons {
-          display: flex;
-          width: 10%;
-          li {
-            button {
-              font-size: 1.5em;
-              padding: 0 15px;
-              &:hover {
-                color: purple;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+
   div.center {
     max-width: 1080px;
     width: 100%;
@@ -54,11 +17,12 @@ header {
         position: relative;
         &:not(:last-child)::after {
           content: "";
+          display: block;
           position: absolute;
-          border-right: 1px solid #aaa;
+          height: 13px;
+          border-right: 1px solid #bbb;
           opacity: 0.7;
-          height: 100%;
-          top: 0;
+          top: 5px;
           right: -7.5px;
         }
         a {
@@ -216,12 +180,76 @@ header {
           font-weight: 600;
         }
       }
-      .header-search {
+      div.header-search {
         display: none;
       }
+
       .header-buttons {
         display: none;
       }
     }
   } // div.center
+}
+
+header.fix {
+  position: fixed;
+  div.center {
+    .members {
+      display: none;
+    }
+    .header-middle {
+      display: none;
+    }
+    .header-gnb {
+      .categories {
+        margin-right: 50px;
+      }
+      .gnb-menu {
+        width: 40%;
+      }
+      .deliv-guide {
+        display: none;
+      }
+      .header-search,
+      .header-buttons {
+        display: block;
+        position: relative;
+      }
+      .header-search {
+        position: relative;
+        width: 25%;
+        input {
+          border: none;
+          background-color: #eee;
+          border-radius: 5px;
+          padding: 7px;
+          width: 100%;
+          &::placeholder {
+            font-size: 0.8em;
+            color: rgba(#333, 0.6);
+          }
+        }
+        .search-btn {
+          position: absolute;
+          font-size: 1em;
+          color: black;
+          top: 20%;
+          right: 5%;
+        }
+      }
+      .header-buttons {
+        display: flex;
+        width: 10%;
+        li {
+          button {
+            font-size: 1.5em;
+            padding: 0 15px;
+            &:hover {
+              color: purple;
+            }
+          }
+        }
+      }
+    }
+  }
 }
