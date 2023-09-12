@@ -1,8 +1,12 @@
 @use "../mixin.scss" as m;
 
+
 header {
   background-color: white;
   width: 100%;
+  top: 0;
+  position: relative;
+  z-index: 100;
 
   div.center {
     max-width: 1080px;
@@ -193,6 +197,7 @@ header {
 
 header.fix {
   position: fixed;
+  box-shadow: 0 0 5px rgba(#000, .4);
   div.center {
     .members {
       display: none;

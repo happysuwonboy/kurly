@@ -1,33 +1,28 @@
-import { qySel } from "./functions.js"
+export const fnRaf = (fn, isStartMotion, rafId) => () => {
+  if (!isStartMotion) return
+  isStartMotion = false;
+  rafId = requestAnimationFrame(function () {
+    // code start
+    fn();
+    // code finish
+    isStartMotion = true;
+  }) // requestAnimationFrame
+}
 
-export let scrollY = window.scrollY
-
-const setTopBtn = () => {
-  if(scrollY > 300){
-    qySel('.top-btn').classList.add('active')
-  }else{
-    qySel('.top-btn').classList.remove('active')
-  }
-}//setTopBtn
-
-setTopBtn()
-
-window.addEventListener('resize',e=>{
-  scrollY = window.scrollY
-  setTopBtn()
-})
-window.addEventListener('scroll',e=>{
-  scrollY = window.scrollY
-  setTopBtn()
-})
-
-qySel('.top-btn').addEventListener('click',e=>{
-  window.scrollTo({
-    top : 0,
-    behavior : 'smooth',
+export const winScrEvent = (...fns) => {
+  fns.forEach(fn => { fn() })
+  $(window).scroll(function () {
+    fns.forEach(fn => { fn() });
+  }).resize(function () {
+    fns.forEach(fn => { fn() });
   })
-})
+}
 
-qySel('.toggle-btn').addEventListener('click',e=>{
-  qySel('.menu-list ul').classList.toggle('active')
-})
+export const fnGetWinInfo = function () {
+  window.scry = $(window).scrollTop()
+  window.scrx = $(window).scrollLeft()
+  window.winh = $(window).height()
+  window.winw = $(window).width()
+}//fnGetWinInfo
+
+winScrEvent(fnGetWinInfo)

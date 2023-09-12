@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://kit.fontawesome.com/1fc51434d9.js" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="module" src="./js/common.js"></script>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/header/header.css">
   <link rel="stylesheet" href="./css/home/home-visual.css">
