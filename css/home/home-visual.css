@@ -1,5 +1,46 @@
-.home-visual {
+main section.home-visual {
   width: 100%;
-  height: 400px;
-  background-color: gray;
+}
+main section.home-visual .carousel {
+  position: relative;
+}
+main section.home-visual .carousel:hover button {
+  opacity: 1;
+}
+main section.home-visual .carousel .swiper-slide img {
+  width: 100%;
+}
+main section.home-visual .carousel button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+main section.home-visual .carousel button::after {
+  content: "";
+}
+main section.home-visual .carousel button.swiper-button-prev {
+  left: 13%;
+}
+main section.home-visual .carousel button.swiper-button-next {
+  right: 13%;
+}
+main section.home-visual .carousel .pagination {
+  display: block;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  color: white;
+  font-size: 0.8em;
+  line-height: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 25px;
+  border-radius: 15px;
+  bottom: 20px;
+  left: 70%;
 }/*# sourceMappingURL=home-visual.css.map */
