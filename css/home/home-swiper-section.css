@@ -1,0 +1,59 @@
+section.swiper-prod-section div.center {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+section.swiper-prod-section div.center span.prod-section-title {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+section.swiper-prod-section div.center p.prod-section-subtitle {
+  margin-top: 1vh;
+  color: #888;
+}
+section.swiper-prod-section div.center button.prod-section-more {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 1.3em;
+}
+section.swiper-prod-section div.center button.prod-section-more:hover {
+  color: purple;
+}
+section.swiper-prod-section div.center .prod-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 3vh;
+}
+section.swiper-prod-section div.center .swiper-button-prev,
+section.swiper-prod-section div.center .swiper-button-next {
+  position: absolute;
+  color: black;
+  background-color: white;
+  width: 54px;
+  height: 54px;
+  font-size: 1.2em;
+  border-radius: 50%;
+  box-shadow: 0 0 2px black;
+  top: 50%;
+}
+section.swiper-prod-section div.center .swiper-button-prev::after,
+section.swiper-prod-section div.center .swiper-button-next::after {
+  content: "";
+}
+section.swiper-prod-section div.center .swiper-button-prev.swiper-button-prev,
+section.swiper-prod-section div.center .swiper-button-next.swiper-button-prev {
+  left: -27px;
+}
+section.swiper-prod-section div.center .swiper-button-prev.swiper-button-next,
+section.swiper-prod-section div.center .swiper-button-next.swiper-button-next {
+  right: -27px;
+}
+section.swiper-prod-section div.center .swiper-button-disabled {
+  display: none;
+}
+
+section.prod-section1 {
+  padding-top: 8vh;
+}/*# sourceMappingURL=home-swiper-section.css.map */

@@ -1,5 +1,4 @@
 section.home-timeout-section {
-  padding: 15vh 0;
   div.center {
     width: 100%;
     max-width: 1080px;
@@ -30,73 +29,22 @@ section.home-timeout-section {
       }
       p.timeout-desc {
         margin-top: 3vh;
-        font-size: .9em;
-        color: #AAA;
+        font-size: 0.9em;
+        color: #aaa;
       }
     }
     .prod-container {
       width: 75%;
       display: flex;
       justify-content: flex-end;
-      div.product {
-          display: flex;
-          flex-direction: column;
-          text-align: left;
-          &:not(:last-of-type) {
-            margin-right: 18px;
-          }
-          .prod-figure {
-            position: relative;
-            img {
-              width: 100%;
-            }
-            figcaption {
-              position: absolute;
-              top: 8px; left: 8px;
-              background-color: rgb(220, 90, 220);
-              font-size: .9em;
-              font-weight: 600;
-              padding: 5px 8px;
-              border-radius: 7px;
-              color: white;
-            }
-          }
-          .prod-cart-btn {
-            padding: 5px;
-            margin-top: 6px;
-            border: 0.2px solid #AAA;
-            border-radius: 5px;
-            transition: all .3s;
-            &:hover {
-              background-color: purple;
-              color: white;
-            }
-          }
-          h3.prod-name {
-            text-align: left;
-            margin-top: 6px;
-            font-weight: 600;
-          }
-          span.original-price {
-            margin-top: 5px;
-            color: #AAA;
-            text-decoration:line-through
-          }
-          div.discount {
-            span {
-              font-weight: 600;
-              &.dc-percent {
-                color: orangered;
-                margin-right: 5px;
-              }
-            }
-          }
+      .product {
+        &:not(:last-of-type) {
+          margin-right: 18px;
+        }
       }
     }
-    
   }
 }
-
 
 section.prod-section2 {
   .prod-container {
@@ -107,11 +55,10 @@ section.prod-section2 {
 }
 
 section.prod-section3 {
-  padding-top: 0;
   .prod-container {
     justify-content: flex-end;
     .product {
-      width: 45%;
+      width: 43%;
     }
   }
 }

@@ -17,7 +17,7 @@ let rafId;
 let headerH = $(`header`).innerHeight();
 let gnbH = $(`header .header-gnb`).offset().top;
 const scrollMotion = fnRaf(() => {
-  if (scry >= gnbH) {
+  if (scry >= gnbH + 3) {
     document.querySelector('header').classList.add('fix')
     document.querySelector('body').style.paddingTop = `${headerH + 5}px`
   } else {

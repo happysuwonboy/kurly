@@ -1,7 +1,3 @@
-<footer>
-푸터
-</footer>
-
 </body>
 
 </html>
