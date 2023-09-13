@@ -1,36 +1,50 @@
-section.home-prod-section {
-  margin-top: 7vh;
+section.home-timeout-section {
+  padding: 15vh 0;
   div.center {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    text-align: center;
-    span.prod-section-title {
-      font-size: 1.7em;
-      font-weight: 600;
-    }
-    p.prod-section-subtitle {
-     margin-top: 1vh; 
-    }
-    button.prod-section-more {
-      display: inline-block;
-      margin-left: 15px;
-      font-size: 1.3em;
-      &:hover {
-        color: purple;
+    display: flex;
+    justify-content: space-between;
+    .timeout-info-container {
+      width: 25%;
+      h2.timeout-title {
+        font-size: 1.7em;
+        font-weight: 600;
+        line-height: 120%;
+      }
+      h3.timeout-subtitle {
+        margin-top: 1vh;
+        color: #777;
+      }
+      div.timeout-clock-container {
+        margin-top: 1.5vh;
+        font-size: 2em;
+        i {
+          margin-right: 7px;
+          color: rgb(202, 11, 202);
+        }
+        span {
+          font-weight: 600;
+        }
+      }
+      p.timeout-desc {
+        margin-top: 3vh;
+        font-size: .9em;
+        color: #AAA;
       }
     }
-    
     .prod-container {
-      overflow: hidden;
-      width: 100%;
-      margin-top: 3vh;
-      .swiper-wrapper{
-        .swiper-slide {
-          width: 23.5%;
+      width: 75%;
+      display: flex;
+      justify-content: flex-end;
+      div.product {
           display: flex;
           flex-direction: column;
           text-align: left;
+          &:not(:last-of-type) {
+            margin-right: 18px;
+          }
           .prod-figure {
             position: relative;
             img {
@@ -77,30 +91,27 @@ section.home-prod-section {
               }
             }
           }
-        }
       }
     }
-    position: relative;
-    .swiper-button-prev, .swiper-button-next {
-      position: absolute;
-      &::after {content: '';}
-      color: black;
-      background-color: white;
-      width: 54px;
-      height: 54px;
-      font-size: 1.2em;
-      border-radius: 50%;
-      box-shadow: 0 0 2px black;
-      top: 50%; 
-      &.swiper-button-prev {
-        left: -27px;
-      }
-      &.swiper-button-next {
-        right: -27px;
-      }
+    
+  }
+}
+
+
+section.prod-section2 {
+  .prod-container {
+    .product {
+      width: 32%;
     }
-    .swiper-button-disabled {
-      display: none;
+  }
+}
+
+section.prod-section3 {
+  padding-top: 0;
+  .prod-container {
+    justify-content: flex-end;
+    .product {
+      width: 45%;
     }
   }
 }

@@ -1,36 +1,53 @@
-section.home-prod-section {
-  margin-top: 7vh;
-  div.center {
-    width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
-    text-align: center;
-    span.prod-section-title {
-      font-size: 1.7em;
-      font-weight: 600;
-    }
-    p.prod-section-subtitle {
-     margin-top: 1vh; 
-    }
-    button.prod-section-more {
-      display: inline-block;
-      margin-left: 15px;
-      font-size: 1.3em;
-      &:hover {
-        color: purple;
+main {
+  position: relative;
+  .sticky-banner-scope {
+    position: absolute;
+    right: 1%;
+    top: 32%;
+    width: 80px;
+    height: 100%;
+    .sticky-banner {
+      position: sticky;
+      top: 25%;
+      width: 100%;
+      height: 300px;
+      img.deliv-img {
+        width: 100%;
+        margin-bottom: 3px;
+      }
+      button {
+        width: 100%;
+        margin-top: 3px;
+        font-size: .7em;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #AAA;
+      }
+      .recent-prod-container {
+        text-align: center;
+        margin-top: 8px;
+        border: 1px solid #AAA;
+        padding: 3px;
+        padding-bottom: 8px;
+        h5 {
+          font-size: .7em;
+          padding: 3px;
+        }
+        img {
+          padding: 3%;
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
-    
+  }
+}
+
+// product 공통 레이아웃
+section.common-prod-section {
+  div.center {
     .prod-container {
-      overflow: hidden;
-      width: 100%;
-      margin-top: 3vh;
-      .swiper-wrapper{
-        .swiper-slide {
-          width: 23.5%;
-          display: flex;
-          flex-direction: column;
-          text-align: left;
+        .product {
           .prod-figure {
             position: relative;
             img {
@@ -78,29 +95,7 @@ section.home-prod-section {
             }
           }
         }
-      }
-    }
-    position: relative;
-    .swiper-button-prev, .swiper-button-next {
-      position: absolute;
-      &::after {content: '';}
-      color: black;
-      background-color: white;
-      width: 54px;
-      height: 54px;
-      font-size: 1.2em;
-      border-radius: 50%;
-      box-shadow: 0 0 2px black;
-      top: 50%; 
-      &.swiper-button-prev {
-        left: -27px;
-      }
-      &.swiper-button-next {
-        right: -27px;
-      }
-    }
-    .swiper-button-disabled {
-      display: none;
+      
     }
   }
 }

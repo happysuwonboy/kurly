@@ -16,8 +16,10 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/header/header.css">
+  <link rel="stylesheet" href="./css/home/home-common.css">
   <link rel="stylesheet" href="./css/home/home-visual.css">
   <link rel="stylesheet" href="./css/home/home-prod-section.css">
+  <link rel="stylesheet" href="./css/home/home-timeout-section.css">
 </head>
 
 <body>

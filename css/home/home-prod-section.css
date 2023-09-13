@@ -6,6 +6,7 @@ section.home-prod-section div.center {
   max-width: 1080px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 section.home-prod-section div.center span.prod-section-title {
   font-size: 1.7em;
@@ -26,7 +27,6 @@ section.home-prod-section div.center .prod-container {
   overflow: hidden;
   width: 100%;
   margin-top: 3vh;
-  position: relative;
 }
 section.home-prod-section div.center .prod-container .swiper-wrapper .swiper-slide {
   width: 23.5%;
@@ -79,14 +79,26 @@ section.home-prod-section div.center .prod-container .swiper-wrapper .swiper-sli
   color: orangered;
   margin-right: 5px;
 }
-section.home-prod-section div.center .prod-container .swiper-button-prev, section.home-prod-section div.center .prod-container .swiper-button-next {
+section.home-prod-section div.center .swiper-button-prev, section.home-prod-section div.center .swiper-button-next {
   position: absolute;
   color: black;
   background-color: white;
-  box-shadow: 0 0 10px black;
-  top: 45%;
-  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  font-size: 1.2em;
+  border-radius: 50%;
+  box-shadow: 0 0 2px black;
+  top: 50%;
 }
-section.home-prod-section div.center .prod-container .swiper-button-prev::after, section.home-prod-section div.center .prod-container .swiper-button-next::after {
+section.home-prod-section div.center .swiper-button-prev::after, section.home-prod-section div.center .swiper-button-next::after {
   content: "";
+}
+section.home-prod-section div.center .swiper-button-prev.swiper-button-prev, section.home-prod-section div.center .swiper-button-next.swiper-button-prev {
+  left: -27px;
+}
+section.home-prod-section div.center .swiper-button-prev.swiper-button-next, section.home-prod-section div.center .swiper-button-next.swiper-button-next {
+  right: -27px;
+}
+section.home-prod-section div.center .swiper-button-disabled {
+  display: none;
 }/*# sourceMappingURL=home-prod-section.css.map */

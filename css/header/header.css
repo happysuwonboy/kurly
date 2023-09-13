@@ -149,7 +149,8 @@ header div.center div.header-gnb div.categories ul.category-list i {
 header div.center div.header-gnb div.categories ul.category-list li {
   font-size: 0.8em;
   padding: 15px 10px;
-  background-color: #fff;
+  background-color: #f6f5f5;
+  box-shadow: 0 0 1px #000;
   transition: all 0.1s;
   position: relative;
 }

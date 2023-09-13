@@ -1,0 +1,110 @@
+section.home-timeout-section {
+  padding: 15vh 0;
+}
+section.home-timeout-section div.center {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+section.home-timeout-section div.center .timeout-info-container {
+  width: 25%;
+}
+section.home-timeout-section div.center .timeout-info-container h2.timeout-title {
+  font-size: 1.7em;
+  font-weight: 600;
+  line-height: 120%;
+}
+section.home-timeout-section div.center .timeout-info-container h3.timeout-subtitle {
+  margin-top: 1vh;
+  color: #777;
+}
+section.home-timeout-section div.center .timeout-info-container div.timeout-clock-container {
+  margin-top: 1.5vh;
+  font-size: 2em;
+}
+section.home-timeout-section div.center .timeout-info-container div.timeout-clock-container i {
+  margin-right: 7px;
+  color: rgb(202, 11, 202);
+}
+section.home-timeout-section div.center .timeout-info-container div.timeout-clock-container span {
+  font-weight: 600;
+}
+section.home-timeout-section div.center .timeout-info-container p.timeout-desc {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  color: #AAA;
+}
+section.home-timeout-section div.center .prod-container {
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+section.home-timeout-section div.center .prod-container div.product {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+section.home-timeout-section div.center .prod-container div.product:not(:last-of-type) {
+  margin-right: 18px;
+}
+section.home-timeout-section div.center .prod-container div.product .prod-figure {
+  position: relative;
+}
+section.home-timeout-section div.center .prod-container div.product .prod-figure img {
+  width: 100%;
+}
+section.home-timeout-section div.center .prod-container div.product .prod-figure figcaption {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgb(220, 90, 220);
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 7px;
+  color: white;
+}
+section.home-timeout-section div.center .prod-container div.product .prod-cart-btn {
+  padding: 5px;
+  margin-top: 6px;
+  border: 0.2px solid #AAA;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+section.home-timeout-section div.center .prod-container div.product .prod-cart-btn:hover {
+  background-color: purple;
+  color: white;
+}
+section.home-timeout-section div.center .prod-container div.product h3.prod-name {
+  text-align: left;
+  margin-top: 6px;
+  font-weight: 600;
+}
+section.home-timeout-section div.center .prod-container div.product span.original-price {
+  margin-top: 5px;
+  color: #AAA;
+  text-decoration: line-through;
+}
+section.home-timeout-section div.center .prod-container div.product div.discount span {
+  font-weight: 600;
+}
+section.home-timeout-section div.center .prod-container div.product div.discount span.dc-percent {
+  color: orangered;
+  margin-right: 5px;
+}
+
+section.prod-section2 .prod-container .product {
+  width: 32%;
+}
+
+section.prod-section3 {
+  padding-top: 0;
+}
+section.prod-section3 .prod-container {
+  justify-content: flex-end;
+}
+section.prod-section3 .prod-container .product {
+  width: 45%;
+}/*# sourceMappingURL=home-timeout-section.css.map */
