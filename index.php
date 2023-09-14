@@ -1,5 +1,6 @@
 <?php include 'header.php' ?>
 <script type="module" src="./js/home.js"></script>
+<script type="module" src="./js/template.js"></script>
 <script type="module" src="./js/infinit-scroll.js"></script>
 
 
@@ -33,7 +34,7 @@
     </div>
   </section> <!--home-visual section-->
 
-  <section class="prod-section1 common-prod-section swiper-prod-section">z
+  <section class="prod-section1 common-prod-section swiper-prod-section">
     <div class="center">
 
       <span class="prod-section-title">
@@ -376,7 +377,17 @@
     </div> <!--center-->
   </section> <!--prod-section4-->
 
+  <!-- <section class="banner-section common-prod-section">
+    <div class="center">
+      <img src="./img/section-banner-img.png" alt="">
+    </div>
+  </section> -->
 
 </main>
 
+
+<div class="trigger"></div>
+
 <?php include 'footer.php' ?>
+
+

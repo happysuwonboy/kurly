@@ -28,6 +28,7 @@ let isStartMotion = true;
 let rafId;
 let headerH = $(`header`).innerHeight();
 let gnbH = $(`header .header-gnb`).offset().top;
+
 const scrollMotion = fnRaf(() => {
   if (scry >= gnbH + 3) {
     document.querySelector('header').classList.add('fix')

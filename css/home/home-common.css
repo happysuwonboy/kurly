@@ -95,4 +95,18 @@ section.common-prod-section div.center .prod-container .product div.discount spa
 section.common-prod-section div.center .prod-container .product div.discount span.dc-percent {
   color: orangered;
   margin-right: 5px;
+}
+
+.banner-section div.center {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.banner-section div.center img {
+  width: 100%;
+}
+
+.trigger {
+  border: 1px solid red;
+  opacity: 0;
 }/*# sourceMappingURL=home-common.css.map */
