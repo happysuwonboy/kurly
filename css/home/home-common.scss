@@ -3,9 +3,9 @@ main {
   .sticky-banner-scope {
     position: absolute;
     right: 1%;
-    top: 16.5%;
+    top: 50vh;
     width: 80px;
-    height: 75%;
+    height: 100%;
     .sticky-banner {
       position: sticky;
       top: 25%;
@@ -119,4 +119,3 @@ section.common-prod-section {
   border: 1px solid red;
   opacity: 0;
 }
-

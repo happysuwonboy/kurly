@@ -73,5 +73,3 @@ printRestTime();
 const elevenTimeOut = setInterval(() => {
   printRestTime();
 }, 1000)
-
-

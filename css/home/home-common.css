@@ -4,9 +4,9 @@ main {
 main .sticky-banner-scope {
   position: absolute;
   right: 1%;
-  top: 16.5%;
+  top: 50vh;
   width: 80px;
-  height: 75%;
+  height: 100%;
 }
 main .sticky-banner-scope .sticky-banner {
   position: sticky;
