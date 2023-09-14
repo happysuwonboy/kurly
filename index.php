@@ -2,6 +2,7 @@
 <script type="module" src="./js/home.js"></script>
 <script type="module" src="./js/infinit-scroll.js"></script>
 
+
 <main>
   <div class="sticky-banner-scope">
     <div class="sticky-banner">
@@ -15,6 +16,7 @@
       </div>
     </div>
   </div> <!--sticky banner-->
+
 
   <section class="home-visual">
     <div class="carousel">
@@ -31,7 +33,7 @@
     </div>
   </section> <!--home-visual section-->
 
-  <section class="prod-section1 common-prod-section swiper-prod-section">
+  <section class="prod-section1 common-prod-section swiper-prod-section">z
     <div class="center">
 
       <span class="prod-section-title">

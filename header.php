@@ -25,6 +25,16 @@
 <body>
   <script type="module" src="./js/header.js"></script>
 
+  
+  <div class="popup-banner">
+    <img src="./img/popup-banner-img.png" alt="">
+    <div class="btn-container">
+      <button class="close-popup-tomorrow">오늘 하루 안 보기</button>
+      <button class="close-popup">닫기</button>
+    </div>
+  </div>
+
+
   <div class="top-banner">
     지금 가입하고,<span> 1만원 할인 쿠폰</span> 받아가세요!
     <button><i class="fa-solid fa-x"></i></button>

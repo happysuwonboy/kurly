@@ -13,7 +13,45 @@ body {
   font-family: "Nanum Myeongjo", serif;
 }
 :root {
-  --sky: #03b3e4; 
-  --green: #8ccda2; 
+  --sky: #03b3e4;
+  --green: #8ccda2;
   --navy: #091a38;
+}
+
+.popup-banner {
+  width: 430px;
+  position: absolute;
+  z-index: 30;
+  top: 25%;
+  left: 21%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #888;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    button {
+      border-radius: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      flex: 1;
+      padding: 17px;
+      background-color: #f5f1f1;
+      &:hover {
+        background-color: #eceaea;
+      }
+      &:first-child {
+         border-bottom-right-radius:0;
+         border-right: 1px solid #DDD;
+      }
+      &:last-child {
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
 }
