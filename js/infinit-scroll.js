@@ -1,20 +1,4 @@
-import { displayTemplate, setProdPrice } from "./template.js";
-
-const printRestTime = () => {
-  let now = new Date();
-  let tomorrow = new Date(new Date().setDate(now.getDate() + 1))
-  let tomorrowEleven = new Date(tomorrow.getFullYear(), tomorrow.getMonth(), tomorrow.getDate(), 11, 0, 0) // 당일 11시 지난 경우
-  let todayEleven = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 11, 0, 0); // 당일 11시 지나지 않은 경우
-  let restTime = parseInt((tomorrowEleven.getTime() - now.getTime()) / 1000);
-  restTime = todayEleven.getTime() - now.getTime() > 0 ? parseInt((todayEleven.getTime() - now.getTime()) / 1000) : restTime;
-  let restTimeHour = parseInt(restTime / (60 * 60))
-  let restTimeMin = parseInt((restTime % (60 * 60)) / 60)
-  let restTimeSec = parseInt((restTime % (60 * 60)) % 60)
-  restTimeHour = restTimeHour < 10 ? `0${restTimeHour}` : restTimeHour
-  restTimeMin = restTimeMin < 10 ? `0${restTimeMin}` : restTimeMin
-  restTimeSec = restTimeSec < 10 ? `0${restTimeSec}` : restTimeSec
-  document.querySelector('.home-timeout-section .timeout-resttime').innerText = `${restTimeHour}:${restTimeMin}:${restTimeSec}`
-}
+import { displayTemplate} from "./template.js";
 
 ////////////////////
 //무한스크롤
@@ -38,3 +22,4 @@ const observer = new IntersectionObserver(([entry]) => {
 })
 
 observer.observe(document.querySelector(`.trigger`))
+
