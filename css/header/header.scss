@@ -312,5 +312,8 @@ header.fix {
     position: absolute;
     right: 415px;
     opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
   }
 }

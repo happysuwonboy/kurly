@@ -302,4 +302,7 @@ header.fix div.center .header-gnb .header-buttons li button:hover {
   position: absolute;
   right: 415px;
   opacity: 0.7;
+}
+.top-banner button:hover {
+  opacity: 1;
 }/*# sourceMappingURL=header.css.map */
