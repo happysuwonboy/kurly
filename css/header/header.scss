@@ -15,7 +15,7 @@ header {
       display: flex;
       justify-content: flex-end;
       padding: 4px;
-      li {
+      > li {
         margin-left: 15px;
         position: relative;
         &:not(:last-child)::after {
@@ -39,6 +39,28 @@ header {
           &.active {
             color: purple;
             font-weight: 600;
+          }
+        }
+        &:last-child:hover ul {
+          display: block;
+        }
+        position: relative;
+        > ul {
+          width: 100px;
+          position: absolute;
+          left: -50px;
+          padding-top: 10px;
+          display: none;
+          li {
+            background-color: #faf7f7;
+            font-size: .7em;
+            cursor: pointer;
+            box-shadow: 0 0 1px black;
+            padding: 5px 3px;
+            border: 1px solid #eee;
+            &:hover {
+              background-color: #EEE;
+            }
           }
         }
       } // li
@@ -213,7 +235,7 @@ header {
 
 header.fix {
   position: fixed;
-  box-shadow: 0 0 5px rgba(#000, 0.4);
+  box-shadow: 0 0 3px rgba(#000, 0.4);
   div.center {
     .members {
       display: none;

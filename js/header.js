@@ -27,14 +27,19 @@ if (localStorage.getItem('popup-banner-hide')) {
 let isStartMotion = true;
 let rafId;
 let headerH = $(`header`).innerHeight();
-let gnbH = $(`header .header-gnb`).offset().top;
+let bannerH = document.querySelector('.top-banner').clientHeight;
+let gnbOffsetTop = $(`header .header-gnb`).offset().top;
 
 const scrollMotion = fnRaf(() => {
-  if (scry >= gnbH + 3) {
+  if (scry >= gnbOffsetTop + 3) {
     document.querySelector('header').classList.add('fix')
-    document.querySelector('body').style.paddingTop = `${headerH + 5}px`
+    document.querySelector('.top-banner').style.display = 'none'
+    document.querySelector('body').style.paddingTop = `${headerH + bannerH + 6}px`
   } else {
     document.querySelector('header').classList.remove('fix')
+    if (!localStorage.getItem('top-banner-hide')) {
+      document.querySelector('.top-banner').style.display = 'block'
+    }
     document.querySelector('body').style.paddingTop = `0`
   }
 }, isStartMotion, rafId)
@@ -44,7 +49,8 @@ winScrEvent(scrollMotion);
 document.querySelector('.top-banner button').addEventListener('click', e => {
   document.querySelector('.top-banner').style.display = 'none';
   localStorage.setItem('top-banner-hide', JSON.stringify(new Date().getTime()))
-  gnbH = $(`header .header-gnb`).offset().top; // 탑 배너 없어지면 gnb offset 다시 갱신해서 스크롤 이벤트 정상적으로 작동하도록
+  gnbOffsetTop = $(`header .header-gnb`).offset().top; // 탑 배너 없어지면 gnb offset 다시 갱신해서 스크롤 이벤트 정상적으로 작동하도록
+  bannerH = document.querySelector('.top-banner').clientHeight;
 })
 
 

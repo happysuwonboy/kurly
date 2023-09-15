@@ -46,7 +46,15 @@
       <ul class="members">
         <li><a class="active" href="#">회원가입</a></li>
         <li><a href="#">로그인</a></li>
-        <li><a href="#">고객센터</a></li>
+        <li>
+          <a href="#">고객센터<span style="font-size: 1.2em; font-weight:600">▾</span></a>
+          <ul>
+            <li>공지사항</li>
+            <li>자주 하는 질문</li>
+            <li>1:1 문의</li>
+            <li>대량주문 문의</li>
+          </ul>
+        </li>
       </ul> <!--members-->
 
       <div class="header-middle">

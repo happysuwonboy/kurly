@@ -53,9 +53,13 @@ section.common-prod-section {
         flex-direction: column;
         text-align: left;
         .prod-figure {
+          overflow: hidden;
           position: relative;
           img {
             width: 100%;
+            transform: scale(1);
+            transition: all .5s;
+            cursor: pointer;
           }
           figcaption {
             position: absolute;
@@ -99,6 +103,9 @@ section.common-prod-section {
             }
           }
         }
+        &:hover img {
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -118,4 +125,29 @@ section.common-prod-section {
 .trigger {
   border: 1px solid red;
   opacity: 0;
+}
+
+.top-btn {
+  position: fixed;
+  width: 50px; height: 50px;
+  right: 2%; bottom: 5%;
+  background-color: #f9f7f7;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #000;
+  box-sizing: border-box;
+  transform: translateY(110px);
+  opacity: 0;
+  transition: all .5s;
+  pointer-events: none;
+  z-index: 30;
+  &:hover {
+    background-color: rgb(135, 10, 135);
+    color: white;
+  }
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
 }

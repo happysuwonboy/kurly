@@ -1,3 +1,4 @@
+import { fnRaf, winScrEvent } from "./common.js";
 import { printRestTime } from "./template.js";
 
 // home visual section 이미지 dynamic html 
@@ -6,6 +7,21 @@ for (let i = 1; i <= 13; i++) {
   <div class="swiper-slide"><img src="./img/slider-img/slider-img${i}.png" alt=""></div>
   `)
 }
+
+let triggerOffset = $('.trigger').offset().top;
+let isStartMotion = true;
+let rafid
+let scrollMotion = fnRaf(()=>{
+  if (scry >= triggerOffset*0.5) {
+    document.querySelector('.top-btn').classList.add('active')
+  } else {
+    document.querySelector('.top-btn').classList.remove('active')
+  }
+},isStartMotion,rafid)
+
+document.querySelector('.top-btn').addEventListener('click', ()=>{
+  window.scrollTo({top:0, behavior:'smooth'})
+})
 
 // home visual section 스와이퍼
 const homeVisualSwiper = new Swiper('.home-visual .carousel', {
@@ -58,3 +74,5 @@ printRestTime(`.prod-section2`,11);
 const elevenTimeOut = setInterval(() => {
   printRestTime(`.prod-section2`,11);
 }, 1000)
+
+winScrEvent(scrollMotion)

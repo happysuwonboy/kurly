@@ -15,11 +15,12 @@ header div.center ul.members {
   justify-content: flex-end;
   padding: 4px;
 }
-header div.center ul.members li {
+header div.center ul.members > li {
   margin-left: 15px;
   position: relative;
+  position: relative;
 }
-header div.center ul.members li:not(:last-child)::after {
+header div.center ul.members > li:not(:last-child)::after {
   content: "";
   display: block;
   position: absolute;
@@ -29,18 +30,39 @@ header div.center ul.members li:not(:last-child)::after {
   top: 5px;
   right: -7.5px;
 }
-header div.center ul.members li a {
+header div.center ul.members > li a {
   font-size: 0.75em;
 }
 @media (hover: hover) {
-  header div.center ul.members li a:hover {
+  header div.center ul.members > li a:hover {
     text-decoration: underline;
     color: purple;
   }
 }
-header div.center ul.members li a.active {
+header div.center ul.members > li a.active {
   color: purple;
   font-weight: 600;
+}
+header div.center ul.members > li:last-child:hover ul {
+  display: block;
+}
+header div.center ul.members > li > ul {
+  width: 100px;
+  position: absolute;
+  left: -50px;
+  padding-top: 10px;
+  display: none;
+}
+header div.center ul.members > li > ul li {
+  background-color: #faf7f7;
+  font-size: 0.7em;
+  cursor: pointer;
+  box-shadow: 0 0 1px black;
+  padding: 5px 3px;
+  border: 1px solid #eee;
+}
+header div.center ul.members > li > ul li:hover {
+  background-color: #EEE;
 }
 header div.center div.header-middle {
   width: 100%;
@@ -205,7 +227,7 @@ header div.center div.header-gnb .header-buttons {
 
 header.fix {
   position: fixed;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 header.fix div.center .members {
   display: none;

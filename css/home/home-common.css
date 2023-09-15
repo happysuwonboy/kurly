@@ -52,10 +52,14 @@ section.common-prod-section div.center .prod-container .product {
   text-align: left;
 }
 section.common-prod-section div.center .prod-container .product .prod-figure {
+  overflow: hidden;
   position: relative;
 }
 section.common-prod-section div.center .prod-container .product .prod-figure img {
   width: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 section.common-prod-section div.center .prod-container .product .prod-figure figcaption {
   position: absolute;
@@ -96,6 +100,9 @@ section.common-prod-section div.center .prod-container .product div.discount spa
   color: orangered;
   margin-right: 5px;
 }
+section.common-prod-section div.center .prod-container .product:hover img {
+  transform: scale(1.05);
+}
 
 .banner-section div.center {
   width: 100%;
@@ -109,4 +116,31 @@ section.common-prod-section div.center .prod-container .product div.discount spa
 .trigger {
   border: 1px solid red;
   opacity: 0;
+}
+
+.top-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 2%;
+  bottom: 5%;
+  background-color: #f9f7f7;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #000;
+  box-sizing: border-box;
+  transform: translateY(110px);
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+  z-index: 30;
+}
+.top-btn:hover {
+  background-color: rgb(135, 10, 135);
+  color: white;
+}
+.top-btn.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
 }/*# sourceMappingURL=home-common.css.map */

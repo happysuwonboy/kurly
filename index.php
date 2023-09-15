@@ -3,6 +3,9 @@
 <script type="module" src="./js/template.js"></script>
 <script type="module" src="./js/infinit-scroll.js"></script>
 
+<button class="top-btn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <main>
   <div class="sticky-banner-scope">
