@@ -1,4 +1,4 @@
-import { displayTemplate,} from "./template.js";
+import { displaySections} from "./template.js";
 
 ////////////////////
 //무한스크롤
@@ -15,7 +15,7 @@ const observer = new IntersectionObserver(([entry]) => {
     page += 1;
     if (page > totalPages) return;
     setTimeout(() => {
-      displayTemplate(startSectionNum)
+      displaySections(startSectionNum)
       startSectionNum += 4
     }, 300)
   }

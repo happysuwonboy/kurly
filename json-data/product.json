@@ -2,71 +2,85 @@
   {
     "prod_name": "[전주 베테랑] 인기 메뉴 5종 (택2)",
     "org_price": 8900,
+    "dc_percent": 10,
     "imgPath": "./img/products-img/product15.jpg"
   },
   {
     "prod_name": "[닥터브로너스] 퓨어 캐스틸 솝 950ml 5종 (택1)(+펌프 증정)",
     "org_price": 33000,
+    "dc_percent": 25,
     "imgPath": "./img/products-img/product16.jpg"
   },
   {
     "prod_name": "[선물세트] 대상 건강한 갱년기를 위한 리봄순액 (30일분)",
     "org_price": 62000,
+    "dc_percent": 53,
     "imgPath": "./img/products-img/product17.jpg"
   },
   {
     "prod_name": "덴마크 유산균이야기 선물세트 (180일분)+(쇼핑백증정)",
     "org_price": 276000,
+    "dc_percent": 65,
     "imgPath": "./img/products-img/product25.jpg"
   },
   {
     "prod_name": "[글래드] 매직랩 미니+매직백 세트 6종 (택1)",
     "org_price": 16500,
+    "dc_percent": 21,
     "imgPath": "./img/products-img/product26.jpg"
   },
   {
     "prod_name": "[발뮤다] 팟 전기주전자 2종 (화이트/블랙 택1)",
     "org_price": 199000,
+    "dc_percent": 20,
     "imgPath": "./img/products-img/product27.jpg"
   },
   {
     "prod_name": "[설화수] 자음 2종 세트",
     "org_price": 140000,
+    "dc_percent": 20,
     "imgPath": "./img/products-img/product7.jpg"
   },
   {
     "prod_name": "[선물세트] 횡성축협한우 1++ 프리미엄 1호 (냉장) (예약일 수령)",
     "org_price": 259000,
+    "dc_percent": 10,
     "imgPath": "./img/products-img/product24.jpg"
   },
   {
     "prod_name": "프리미엄 구강 선물세트_투스노트, 유시몰 5종 (택1)",
     "org_price": 80000,
+    "dc_percent": 53,
     "imgPath": "./img/products-img/product28.jpg"
   },
   {
     "prod_name": "[델리치오] 호주산 목초육 안심 스테이크 250g (냉장)",
     "org_price": 22900,
+    "dc_percent": 25,
     "imgPath": "./img/products-img/product5.jpg"
   },
   {
     "prod_name": "[시골보쌈과 감자옹심이] 감자 옹심이 칼국수 (2인분)",
     "org_price": 10500,
+    "dc_percent": 15,
     "imgPath": "./img/products-img/product29.jpg"
   },
   {
     "prod_name": "[이연복의 목란] 짜장면 2인분",
     "org_price": 9900,
+    "dc_percent": 5,
     "imgPath": "./img/products-img/product30.jpg"
   },
   {
     "prod_name": "[한팟] 치즈 부대찌개 1858g(냉장)",
     "org_price": 13500,
+    "dc_percent": 10,
     "imgPath": "./img/products-img/product31.jpg"
   },
   {
     "prod_name": "[통뼈] 뼈해장국 900gX2개입",
     "org_price": 21000,
+    "dc_percent": 13,
     "imgPath": "./img/products-img/product32.jpg"
   }
 ]
