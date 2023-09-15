@@ -19,22 +19,26 @@ const sectionTitle = [
   ['9월 리빙신상 담으러가기🛒', '금주 오픈 핫한 신상모음😎']
 ]
 
-const prodList = [
-  new Product('[전주 베테랑] 인기 메뉴 5종 (택2)', 8900, './img/products-img/product15.jpg'),
-  new Product('[닥터브로너스] 퓨어 캐스틸 솝 950ml 5종 (택1)(+펌프 증정)', 33000, './img/products-img/product16.jpg'),
-  new Product('[선물세트] 대상 건강한 갱년기를 위한 리봄순액 (30일분)', 62000, './img/products-img/product17.jpg'),
-  new Product('덴마크 유산균이야기 선물세트 (180일분)+(쇼핑백증정)', 276000, './img/products-img/product25.jpg'),
-  new Product('[글래드] 매직랩 미니+매직백 세트 6종 (택1)',16500,'./img/products-img/product26.jpg'),
-  new Product('[발뮤다] 팟 전기주전자 2종 (화이트/블랙 택1)',199000,'./img/products-img/product27.jpg'),
-  new Product('[설화수] 자음 2종 세트',140000,'./img/products-img/product7.jpg'),
-  new Product('[선물세트] 횡성축협한우 1++ 프리미엄 1호 (냉장) (예약일 수령)',259000,'./img/products-img/product24.jpg'),
-  new Product('프리미엄 구강 선물세트_투스노트, 유시몰 5종 (택1)',80000,'./img/products-img/product28.jpg'),
-  new Product('[델리치오] 호주산 목초육 안심 스테이크 250g (냉장)',22900,'./img/products-img/product5.jpg'),
-  new Product('[시골보쌈과 감자옹심이] 감자 옹심이 칼국수 (2인분)',10500,'./img/products-img/product29.jpg'),
-  new Product('[이연복의 목란] 짜장면 2인분',9900,'./img/products-img/product30.jpg'),
-  new Product('[한팟] 치즈 부대찌개 1858g(냉장)',13500,'./img/products-img/product31.jpg'),
-  new Product('[통뼈] 뼈해장국 900gX2개입',21000,'./img/products-img/product32.jpg'),
-]
+// const prodList = [
+//   new Product('[전주 베테랑] 인기 메뉴 5종 (택2)', 8900, './img/products-img/product15.jpg'),
+//   new Product('[닥터브로너스] 퓨어 캐스틸 솝 950ml 5종 (택1)(+펌프 증정)', 33000, './img/products-img/product16.jpg'),
+//   new Product('[선물세트] 대상 건강한 갱년기를 위한 리봄순액 (30일분)', 62000, './img/products-img/product17.jpg'),
+//   new Product('덴마크 유산균이야기 선물세트 (180일분)+(쇼핑백증정)', 276000, './img/products-img/product25.jpg'),
+//   new Product('[글래드] 매직랩 미니+매직백 세트 6종 (택1)',16500,'./img/products-img/product26.jpg'),
+//   new Product('[발뮤다] 팟 전기주전자 2종 (화이트/블랙 택1)',199000,'./img/products-img/product27.jpg'),
+//   new Product('[설화수] 자음 2종 세트',140000,'./img/products-img/product7.jpg'),
+//   new Product('[선물세트] 횡성축협한우 1++ 프리미엄 1호 (냉장) (예약일 수령)',259000,'./img/products-img/product24.jpg'),
+//   new Product('프리미엄 구강 선물세트_투스노트, 유시몰 5종 (택1)',80000,'./img/products-img/product28.jpg'),
+//   new Product('[델리치오] 호주산 목초육 안심 스테이크 250g (냉장)',22900,'./img/products-img/product5.jpg'),
+//   new Product('[시골보쌈과 감자옹심이] 감자 옹심이 칼국수 (2인분)',10500,'./img/products-img/product29.jpg'),
+//   new Product('[이연복의 목란] 짜장면 2인분',9900,'./img/products-img/product30.jpg'),
+//   new Product('[한팟] 치즈 부대찌개 1858g(냉장)',13500,'./img/products-img/product31.jpg'),
+//   new Product('[통뼈] 뼈해장국 900gX2개입',21000,'./img/products-img/product32.jpg'),
+// ]
+
+let jsonData = await fetch('./json-data/product.json')
+let prodList = await jsonData.json(); 
+
 
 const couponName = [
   '일일특가', '5%쿠폰', '10%쿠폰+적립', '15%쿠폰', '20%쿠폰', '+금액대별 쿠폰', '+최대2만원쿠폰', '+최대3만원쿠폰'
@@ -102,9 +106,9 @@ const setProdSwiper = (section) => {
 
 const makeSwiperSection = (sectionNum) => {
   let titleIdx = randInt(0, sectionTitle.length - 1)
-  let prodListCopy = prodList.map(v=>{return {...v}})
-  prodListCopy.sort(()=>Math.random()-0.5);
-  prodListCopy = prodListCopy.slice(0,randInt(6,10));
+  let prodListCopy = prodList.map(v => { return { ...v } })
+  prodListCopy.sort(() => Math.random() - 0.5);
+  prodListCopy = prodListCopy.slice(0, randInt(6, 10));
   return `
   <section class="prod-section${sectionNum} common-prod-section swiper-prod-section">
     <div class="center">
@@ -117,9 +121,9 @@ const makeSwiperSection = (sectionNum) => {
         <div class="swiper-wrapper">
 
       ${prodListCopy.map(prod => {
-        let {prod_name, org_price, imgPath} = prod;
-        let [orgPrice,dcPer,dcPrice] = setProdPrice(org_price);
-        return `
+    let { prod_name, org_price, imgPath } = prod;
+    let [orgPrice, dcPer, dcPrice] = setProdPrice(org_price);
+    return `
         <div class="product swiper-slide">
           <figure class="prod-figure">
             <img src="${imgPath}" alt="">
@@ -134,7 +138,7 @@ const makeSwiperSection = (sectionNum) => {
           </div>
         </div> 
         `
-      }).join('\n')}
+  }).join('\n')}
         
           </div>
       </div>
@@ -151,9 +155,9 @@ const makeSwiperSection = (sectionNum) => {
 }
 
 const makeTimeoutSection = (sectionNum) => {
-  let prodListCopy = prodList.map(v=>{return {...v}})
-  prodListCopy.sort(()=>Math.random()-0.5);
-  prodListCopy = prodListCopy.slice(0,randInt(2,3));
+  let prodListCopy = prodList.map(v => { return { ...v } })
+  prodListCopy.sort(() => Math.random() - 0.5);
+  prodListCopy = prodListCopy.slice(0, randInt(2, 3));
   return `
   <section class="prod-section${sectionNum} common-prod-section home-timeout-section">
     <div class="center">
@@ -168,10 +172,10 @@ const makeTimeoutSection = (sectionNum) => {
       </div>
       <div class="prod-container">
 
-      ${prodListCopy.map(prod=>{
-        let {prod_name, org_price, imgPath} = prod;
-        let [orgPrice,dcPer,dcPrice] = setProdPrice(org_price);
-        return `
+      ${prodListCopy.map(prod => {
+    let { prod_name, org_price, imgPath } = prod;
+    let [orgPrice, dcPer, dcPrice] = setProdPrice(org_price);
+    return `
         <div class="product">
           <figure class="prod-figure">
             <img src="${imgPath}" alt="">
@@ -186,7 +190,7 @@ const makeTimeoutSection = (sectionNum) => {
             </div>
         </div> 
         `
-      }).join('\n')}
+  }).join('\n')}
 
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { displayTemplate} from "./template.js";
+import { displayTemplate,} from "./template.js";
 
 ////////////////////
 //무한스크롤
