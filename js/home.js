@@ -15,7 +15,6 @@ for (let i = 1; i <= 13; i++) {
   );
 }
 
-let triggerOffset = $('.trigger').offset().top;
 let isStartMotion = true;
 let rafid;
 let scrollMotion = fnRaf(
@@ -29,10 +28,6 @@ let scrollMotion = fnRaf(
   isStartMotion,
   rafid
 );
-
-document.querySelector('.top-btn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
 
 // home visual section 스와이퍼
 const homeVisualSwiper = new Swiper('.home-visual .carousel', {
@@ -50,9 +45,14 @@ const homeVisualSwiper = new Swiper('.home-visual .carousel', {
   slidesPerGroup: 1,
 });
 
-displaySwiperSection(1);
-displayTimeoutSection(2, 11);
-displaySwiperSection(3);
-displaySwiperSection(4);
+await displaySwiperSection(1);
+await displayTimeoutSection(2, 11);
+await displaySwiperSection(3);
+await displaySwiperSection(4);
+
+let triggerOffset = $('.trigger').offset().top;
+document.querySelector('.top-btn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 winScrEvent(scrollMotion);
