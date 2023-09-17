@@ -1,5 +1,7 @@
 // 상품 섹션 타이틀 리스트
 const sectionTitle = [
+  ['✨세일보다 더 큰 페스타✨', '단 7일! 컬리보장 최대 80% 페스타딜'],
+  ['🌹뷰티컬리페스타 최저가 도전', '오늘이 마지막⏰놓치면 품절!'],
   ['빛이 나는 프리미엄 선물 ✨', '에스티로더부터 1++한우세트까지!'],
   ['💖뷰티컬리페스타 단독 특가', '가장 좋은 가격으로 득템하세요 !'],
   ['찜 많은 쇼핑백·포장 선물🎀', '비주얼과 퀄리티 보장, 최대 80% 할인'],
@@ -129,7 +131,7 @@ const setProdPrice = (product) => {
 };
 
 export const displaySwiperSection = async (sectionNum) => {
-  let jsonData = await fetch('./json-data/product.json');
+  let jsonData = await fetch('./json-data/product-data.json');
   let prodList = await jsonData.json();
   prodList.sort(() => Math.random() - 0.5);
   prodList = prodList.slice(0, randInt(6, 10));
@@ -187,25 +189,24 @@ export const displaySwiperSection = async (sectionNum) => {
   setProdSwiper(`.prod-section${sectionNum}`);
 };
 
-export const displayTimeoutSection = async (sectionNum) => {
-  let jsonData = await fetch('./json-data/product.json');
+export const displayTimeoutSection = async (
+  sectionNum,
+  time = randInt(9, 18)
+) => {
+  let jsonData = await fetch('./json-data/product-data.json');
   let prodList = await jsonData.json();
   prodList.sort(() => Math.random() - 0.5);
   prodList = prodList.slice(0, randInt(2, 3));
-  let randomTime = randInt(9, 18);
-  let randomTimeStr =
-    randomTime >= 13
-      ? `오후 ${randomTime - 12}시 전까지 !`
-      : `오전 ${randomTime}시 전까지 !`;
-  randomTimeStr = randomTime === 12 ? '자정 전까지 !' : randomTimeStr;
+  let timeStr = time >= 13 ? `오후 ${time - 12}시` : `오전 ${time}시`;
+  timeStr = time === 12 ? '자정 12시' : timeStr;
   document.querySelector('main').insertAdjacentHTML(
     'beforeend',
     `
   <section class="prod-section${sectionNum} common-prod-section home-timeout-section">
     <div class="center">
       <div class="timeout-info-container">
-        <h2 class="timeout-title">최저가 도전!</h2>
-        <h3 class="timeout-subtitle">${randomTimeStr}</h3>
+        <h2 class="timeout-title">매일 ${timeStr} <br> OPEN !</h2>
+        <h3 class="timeout-subtitle">24시간 일일 한정 특가 ⏰</h3>
         <div class="timeout-clock-container">
           <i class="fa-solid fa-clock"></i>
           <span class="timeout-resttime"></span>
@@ -241,9 +242,9 @@ export const displayTimeoutSection = async (sectionNum) => {
   </section> 
   `
   );
-  printRestTime(`.prod-section${sectionNum}`, randomTime);
+  printRestTime(`.prod-section${sectionNum}`, time);
   const timer = setInterval(() => {
-    printRestTime(`.prod-section${sectionNum}`, randomTime);
+    printRestTime(`.prod-section${sectionNum}`, time);
   }, 1000);
 };
 

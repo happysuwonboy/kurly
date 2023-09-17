@@ -50,40 +50,9 @@ const homeVisualSwiper = new Swiper('.home-visual .carousel', {
   slidesPerGroup: 1,
 });
 
-const setProdSwiper = (section) => {
-  const homeProdSwiper = new Swiper(`${section} .prod-container`, {
-    autoplay: false,
-    loop: false,
-    spaceBetween: 15,
-    navigation: {
-      nextEl: `${section} .swiper-button-next`,
-      prevEl: `${section} .swiper-button-prev`,
-    },
-    breakpoints: {
-      500: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      1000: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-      },
-    },
-  });
-};
-
-// home prod section 첫번째 섹션 스와이퍼
-
-setProdSwiper('.prod-section1');
-setProdSwiper('.prod-section4');
-
-printRestTime(`.prod-section2`, 11);
-const elevenTimeOut = setInterval(() => {
-  printRestTime(`.prod-section2`, 11);
-}, 1000);
+displaySwiperSection(1);
+displayTimeoutSection(2, 11);
+displaySwiperSection(3);
+displaySwiperSection(4);
 
 winScrEvent(scrollMotion);

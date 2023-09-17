@@ -40,15 +40,4 @@ section.home-timeout-section div.center .prod-container {
 }
 section.home-timeout-section div.center .prod-container .product:not(:last-of-type) {
   margin-right: 18px;
-}
-
-section.prod-section2 .prod-container .product {
-  width: 32%;
-}
-
-section.prod-section3 .prod-container {
-  justify-content: flex-end;
-}
-section.prod-section3 .prod-container .product {
-  width: 43%;
 }/*# sourceMappingURL=home-timeout-section.css.map */
