@@ -1,4 +1,4 @@
-@use "../mixin.scss" as m;
+@use '../mixin.scss' as m;
 
 header {
   background-color: white;
@@ -19,7 +19,7 @@ header {
         margin-left: 15px;
         position: relative;
         &:not(:last-child)::after {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           height: 13px;
@@ -53,13 +53,13 @@ header {
           display: none;
           li {
             background-color: #faf7f7;
-            font-size: .7em;
+            font-size: 0.7em;
             cursor: pointer;
             box-shadow: 0 0 1px black;
             padding: 5px 3px;
             border: 1px solid #eee;
             &:hover {
-              background-color: #EEE;
+              background-color: #eee;
             }
           }
         }
@@ -89,7 +89,7 @@ header {
               color: purple;
             }
             &.beauty::after {
-              content: "N";
+              content: 'N';
               position: absolute;
               top: 0;
               left: 104%;
@@ -183,7 +183,7 @@ header {
               border-bottom: 1px solid #eee;
             }
             &.new::after {
-              content: "";
+              content: '';
               position: absolute;
               top: 5px;
               right: 5px;
@@ -310,7 +310,7 @@ header.fix {
   }
   button {
     position: absolute;
-    right: 415px;
+    right: 14%;
     opacity: 0.7;
     &:hover {
       opacity: 1;

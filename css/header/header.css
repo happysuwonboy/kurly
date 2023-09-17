@@ -62,7 +62,7 @@ header div.center ul.members > li > ul li {
   border: 1px solid #eee;
 }
 header div.center ul.members > li > ul li:hover {
-  background-color: #EEE;
+  background-color: #eee;
 }
 header div.center div.header-middle {
   width: 100%;
@@ -300,7 +300,7 @@ header.fix div.center .header-gnb .header-buttons li button:hover {
 }
 .top-banner button {
   position: absolute;
-  right: 415px;
+  right: 14%;
   opacity: 0.7;
 }
 .top-banner button:hover {

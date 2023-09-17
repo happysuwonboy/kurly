@@ -1,4 +1,4 @@
-import { displaySections} from "./template.js";
+import { displaySectionsByScroll } from './template.js';
 
 ////////////////////
 //무한스크롤
@@ -15,11 +15,10 @@ const observer = new IntersectionObserver(([entry]) => {
     page += 1;
     if (page > totalPages) return;
     setTimeout(() => {
-      displaySections(startSectionNum)
-      startSectionNum += 4
-    }, 300)
+      displaySectionsByScroll(startSectionNum);
+      startSectionNum += 4;
+    }, 300);
   }
-})
+});
 
-observer.observe(document.querySelector(`.trigger`))
-
+observer.observe(document.querySelector(`.trigger`));
