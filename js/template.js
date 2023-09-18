@@ -64,26 +64,11 @@ const randInt = (a, b) => {
 export const printRestTime = (section, hour = 11, min = 0) => {
   let now = new Date();
   let tomorrow = new Date(new Date().setDate(now.getDate() + 1));
-  let tomorrowEleven = new Date(
-    tomorrow.getFullYear(),
-    tomorrow.getMonth(),
-    tomorrow.getDate(),
-    hour,
-    min,
-    0
-  ); // 당일 기준 시간 지난 경우
-  let todayEleven = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate(),
-    hour,
-    min,
-    0
-  ); // 당일 기준 시간 지나지 않은 경우
-  let restTime = parseInt((tomorrowEleven.getTime() - now.getTime()) / 1000);
-  restTime =
-    todayEleven.getTime() - now.getTime() > 0
-      ? parseInt((todayEleven.getTime() - now.getTime()) / 1000)
+  let tomorrowStd = new Date(tomorrow.getFullYear(),tomorrow.getMonth(),tomorrow.getDate(),hour,min,0); // 당일 기준 시간 지난 경우
+  let todayStd = new Date(now.getFullYear(),now.getMonth(),now.getDate(),hour,min,0); // 당일 기준 시간 지나지 않은 경우
+  let restTime = parseInt((tomorrowStd.getTime() - now.getTime()) / 1000);
+  restTime =todayStd.getTime() - now.getTime() > 0
+      ? parseInt((todayStd.getTime() - now.getTime()) / 1000)
       : restTime;
   let restTimeHour = parseInt(restTime / (60 * 60));
   let restTimeMin = parseInt((restTime % (60 * 60)) / 60);
@@ -91,11 +76,13 @@ export const printRestTime = (section, hour = 11, min = 0) => {
   restTimeHour = restTimeHour < 10 ? `0${restTimeHour}` : restTimeHour;
   restTimeMin = restTimeMin < 10 ? `0${restTimeMin}` : restTimeMin;
   restTimeSec = restTimeSec < 10 ? `0${restTimeSec}` : restTimeSec;
-  document.querySelector(
-    `${section} .timeout-resttime`
-  ).innerText = `${restTimeHour}:${restTimeMin}:${restTimeSec}`;
+  document.querySelector(`${section} .timeout-resttime`).innerText = `${restTimeHour}:${restTimeMin}:${restTimeSec}`;
 };
 
+/**
+ * 특정 상품 섹션에 스와이퍼 기능을 세팅
+ * @param {string} section 섹션 선택자 
+ */
 const setProdSwiper = (section) => {
   const homeProdSwiper = new Swiper(`${section} .prod-container`, {
     autoplay: false,
@@ -121,7 +108,11 @@ const setProdSwiper = (section) => {
     },
   });
 };
-
+/**
+ * 상품의 원가, 할인율, 할인적용가 스트링을 반환하는 함수
+ * @param {object} product product json데이터의 원소 객체
+ * @returns 원가, 할인율, 할인적용가 스트링
+ */ 
 const setProdPrice = (product) => {
   let { org_price, dc_percent } = product;
   org_price = Math.round(org_price / 100) * 100;
@@ -129,7 +120,10 @@ const setProdPrice = (product) => {
   dcPrice = Math.floor(dcPrice / 100) * 100;
   return [org_price.toLocaleString(), dc_percent, dcPrice.toLocaleString()];
 };
-
+/**
+ * 스와이퍼 섹션 한개를 메인 태그에 insert하는 함수
+ * @param {number} sectionNum 생성할 상품 섹션 넘버
+ */
 export const displaySwiperSection = async (sectionNum) => {
   let jsonData = await fetch('./json-data/product-data.json');
   let prodList = await jsonData.json();
@@ -189,10 +183,12 @@ export const displaySwiperSection = async (sectionNum) => {
   setProdSwiper(`.prod-section${sectionNum}`);
 };
 
-export const displayTimeoutSection = async (
-  sectionNum,
-  time = randInt(9, 18)
-) => {
+/**
+ * 타임아웃 섹션 한개를 메인 태그에 insert하는 함수
+ * @param {number} sectionNum 생성할 상품 섹션 넘버
+ * @param {number} time 남은시간 계산할 기준 시간 (0~2) 
+ */
+export const displayTimeoutSection = async (sectionNum,time = randInt(9, 18)) => {
   let jsonData = await fetch('./json-data/product-data.json');
   let prodList = await jsonData.json();
   prodList.sort(() => Math.random() - 0.5);

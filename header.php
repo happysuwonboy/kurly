@@ -60,7 +60,7 @@
       <div class="header-middle">
         <ul class="header-logo">
           <li><img class="logo-img" src="./img/logo.png" alt=""></li>
-          <li><a class="market active" href="#" class="market">마켓컬리</a></li>
+          <li><a class="market active" href="#">마켓컬리</a></li>
           <li><a href="#" class="beauty">뷰티컬리</a></li>
         </ul>
 
